@@ -1,5 +1,5 @@
 ## pyspark-external-process
-These scripts were used to run a 100,000 year simulation on 50 32 core Amazon EC2 instances utilizing S3 for permanent storage and a bash script to automatically initialize
+These scripts were used to run a 100,000 year simulation on 50 x 32 core Amazon EC2 instances utilizing S3 for permanent storage and a bash script to automatically initialize
 each worker node.  The Apache Spark Python job:
 * Creates an RDD of 100,000 years
 * Breaks the RDD up into chunks of 50
