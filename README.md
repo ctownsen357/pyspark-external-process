@@ -21,7 +21,7 @@ each worker node.  The Apache Spark Python job:
 
 ### Running
 *runproc.py* is the Spark Python job that I used to run the external process, zip the results and store the results out on Amazon S3.
-The command to run is the typical way one would submit a spark job:
+The command to run is the typical way one would submit a spark job (from the spark directory):
 ```bash
 ./bin/spark-submit --master spark://ip-your-aws-machine-ip:7077 ./runproc.py
 ```
