@@ -26,4 +26,3 @@ The command to run is the typical way one would submit a spark job:
 ./bin/spark-submit --master spark://ip-your-aws-machine-ip:7077 ./runproc.py
 ```
 
-### Downloading results
