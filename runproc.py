@@ -92,7 +92,7 @@ if __name__ == "__main__":
 	"""
 		Usage: Runs a simulation program in parallel by generating a unique control file
 	"""
-	sc = SparkContext(appName="PeterTrackFortran")
+	sc = SparkContext(appName="YourAppName")
 	print('starting...')
 	split_count = 50
 	simulation_count = 100001#add 1 due to indexing
