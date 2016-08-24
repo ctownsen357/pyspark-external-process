@@ -13,8 +13,8 @@ each worker node.  The Apache Spark Python job:
   * Copies the results to an Amazon S3 bucket
 
 ### Setup
-* Used a plain vanilla Ubuntu 14.04 AMI with Apache Spark 1.6.0 installed, could use any AMI type but note that if you use the Amazon AMI that is based on RHEL / CentOS then the included Python version does not support the with statements, you'd need to open and close files directly with direct statements (see what I did there).
-* Used the included init.sh script to automatically configure each worker node by adding the script to the "User Data" section of Step 3: "Configure Instance Details" when setting up the EC2 instances
+* Tested on Ubuntu 14 and RHEL/CentOS 7.x.
+* Used the included init.sh (on Ubuntu) script to automatically configure each worker node by adding the script to the "User Data" section of Step 3: "Configure Instance Details" when setting up the EC2 instances
 * My setup was very specific, download ~ 50 GB of input data, the program to be iteratively run, and a template control file, however the init script demonstrates how something like that may be accomplished and it could be modified to perform any initialization you need to do.
 
 *Note:* My experience has been that the aws command line tool is MUCH faster than the s3cmd utility.  I use the aws command line tool in my bash init script and it copied, to each machine, ~ 50 GB of data to each worker machine in ~ 5 minutes - fast! I use S3cmd when downloading data from outside the Amazon AWS network because it is a very convenient utility.
